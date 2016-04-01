@@ -41,11 +41,14 @@ function checkWind() {
     $("#temperature").append (response.query.results.channel.units.temperature);
     $("#speed").append (response.query.results.channel.units.speed);
   });
-}
+
 </script>
 
 
-<button type="button" onclick="checkWind()" class="btn btn-danger weatherbutton">Check wind conditions color="blue"</button>
+<button type="button" 
+style="background-color:blue" 
+onclick="checkWind()" 
+class="btn btn-danger weatherbutton">Check wind conditions </button>
 
 <h2>Wind conditions for Santa Clara</h2>
 
