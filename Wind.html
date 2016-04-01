@@ -14,6 +14,7 @@
 <body>
 
 
+
 <script>
 
 function checkWind() {
@@ -22,7 +23,7 @@ function checkWind() {
     "async": true,
     "crossDomain": true,
     "dataType": "json",
-  "url": "https://simple-weather.p.mashape.com/weatherdata?lat=37.354108&lng=-121.955236",
+  "url": "https://simple-weather.p.mashape.com/weatherdata?lat=51.9795353&lng=5.6747876",
     "method": "GET",
   "headers": {
     "accept": "application/json",
@@ -41,20 +42,19 @@ function checkWind() {
     $("#temperature").append (response.query.results.channel.units.temperature);
     $("#speed").append (response.query.results.channel.units.speed);
   });
-
+}
 </script>
 
 
-<button type="button" 
-style="background-color:blue" 
-onclick="checkWind()" 
-class="btn btn-danger weatherbutton">Check wind conditions </button>
+<button type="button" onclick="checkWind()" class="btn btn-primary weatherbutton">Check wind conditions</button>
 
-<h2>Wind conditions for Santa Clara</h2>
+<h2>Windcondities voor Wageningen</h2>
 
 <b>Wind chill: </b><span id="wind_chill"></span> <span id="temperature"></span></br>
 <b>Wind speed: </b><span id="wind_speed"></span> <span id="speed"></span></br>
 <b>Wind direction: </b><span id="wind_direction"></span>
+<b>Temperatuur: </b><span id="units_temperature"></span>
+
 </body>
 </html>
 
